@@ -1,0 +1,10 @@
+version: "3"
+name: python3_workspace
+services:
+  python3:
+    build: .
+    volumes:
+      - ./src:/app/src
+    working_dir: /app/src
+    stdin_open: true
+    tty: true
