@@ -1,2 +1,5 @@
-mkdir src
 src配下でプロジェクトを作成
+mkdir src 
+cd src
+outputの作成
+mkdir output

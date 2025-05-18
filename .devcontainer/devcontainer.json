@@ -1,0 +1,36 @@
+{
+    "name": "python3_workspace", // コンテナの名前
+    "dockerComposeFile": "../docker-compose.yml", // docker-compose.yml ファイルへのパス
+    "service": "app", //  (docker-compose内のサービス名)
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",
+                "ms-toolsai.jupyter",
+                "MS-CEINTL.vscode-language-pack-ja",
+                "charliermarsh.ruff",
+                "ms-python.black",
+                "github.copilot",
+                "github.copilot-chat"
+            ],
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/zsh", // コンテナ内のデフォルトシェルを zsh に設定
+                "python.defaultInterpreterPath": "/usr/bin/python3", // Pythonインタプリタのパス
+                "[python]": {
+                    "editor.codeActionsOnSave": {
+                        "source.fixAll.ruff": "explicit", // 保存時に自動で修正
+                        "source.organizeImports.ruff": "explicit" // インポートの整理
+                    },
+                    "editor.defaultFormatter": "charliermarsh.ruff", // ruff フォーマッタを指定
+                    "editor.formatOnSave": true, // 保存時にフォーマットを適用
+                    "editor.formatOnType": true // タイプ時にフォーマットを適用
+                }
+            }
+        }
+    },
+    "forwardPorts": [
+        8002
+    ], // コンテナ内のポートをローカルでアクセス可能にする
+    "remoteUser": "app", // コンテナ内のユーザーを指定
+    "shutdownAction": "stopCompose" // コンテナ停止時に docker-compose を停止する
+}
