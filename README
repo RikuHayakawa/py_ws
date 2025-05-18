@@ -1,5 +1,14 @@
-src配下でプロジェクトを作成
-mkdir src 
+## 概要
+vscode devcontainerでの使用を推奨
+パッケージマネージャにはpoetry(https://python-poetry.org/docs/)を採用
+
+## コンテナの立ち上げ
+docker compose up -d
+
+## ファイルの実行
+
+docker exec -it <container-name> bash
+
 cd src
-outputの作成
-mkdir output
+poetry run python sample.py(指定のファイル)
+
