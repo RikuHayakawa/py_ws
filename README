@@ -12,3 +12,7 @@ docker exec -it <container-name> bash
 cd src
 poetry run python sample.py(指定のファイル)
 
+## その他
+gitコマンドはssh接続の必要なコマンド以外はコンテナ内で実行可能、ホストのsshはマウントしない設定
+
+
