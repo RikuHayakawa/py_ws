@@ -1,2 +1,4 @@
-src/input
-src/output
+src/input/*
+src/output/*
+!src/input/.gitkeep
+!src/output/.gitkeep

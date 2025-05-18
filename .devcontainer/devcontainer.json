@@ -6,6 +6,7 @@
         "vscode": {
             "extensions": [
                 "ms-python.python",
+                "ms-python.vscode-pylance",
                 "ms-toolsai.jupyter",
                 "MS-CEINTL.vscode-language-pack-ja",
                 "charliermarsh.ruff",
@@ -21,7 +22,6 @@
                         "source.fixAll.ruff": "explicit", // 保存時に自動で修正
                         "source.organizeImports.ruff": "explicit" // インポートの整理
                     },
-                    "editor.defaultFormatter": "charliermarsh.ruff", // ruff フォーマッタを指定
                     "editor.formatOnSave": true, // 保存時にフォーマットを適用
                     "editor.formatOnType": true // タイプ時にフォーマットを適用
                 }

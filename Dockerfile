@@ -19,5 +19,4 @@ RUN poetry config virtualenvs.in-project true
 COPY pyproject.toml poetry.lock* ./
 RUN poetry install --no-root
 
-# 実行コマンド（適宜変更）
-CMD ["python3"]
+CMD ["poetry", "run", "python"]
