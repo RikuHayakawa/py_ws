@@ -11,7 +11,7 @@ data = [1, 2, 2, 3, 3, 3, 4, 4, 5]
 plt.figure(figsize=(6, 4))  # 新しい Figure を作成
 sns.histplot(data, bins=5, kde=True)
 plt.title("Histogram")  # タイトルを追加
-plt.savefig("./output/Histogram.png")
+plt.savefig("app/src/output/Histogram.png")
 # 2つ目のグラフ（折れ線グラフ）
 plt.figure(figsize=(6, 4))  # 新しい Figure を作成
 x = [1, 2, 3, 4, 5]
